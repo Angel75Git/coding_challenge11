@@ -77,6 +77,12 @@ class Library {
         book1.updateCopies(-1);
         borrower1.borrowBook("The Great Gatsby"); // Adding book title to borrower's list
     }
+    returnBook(borrowerId, isbn) {
+        const book = this.books.find(b => b.isbn === isbn);
+        const borrower = this.borrowers.find(b => b.borrowerId === borrowerId);
+        book1.updateCopies(1);
+        borrower1.returnBook("The Great Gatsby");
+    }
 }
 
 //Cases: 
@@ -95,3 +101,14 @@ console.log(book1.getDetails());
 
 //Case Test
 console.log(borrower1.borrowedBooks);
+
+
+console.log("=".repeat(40))
+console.log("Task 4");     //Just a decorative touch
+
+
+library.returnBook(201, 123456);
+console.log(book1.getDetails());
+// Expected output: "Title: The Great Gatsby, Author: F. Scott Fitzgerald, ISBN: 123456, Copies: 4"
+console.log(borrower1.borrowedBooks);
+// Expected output: []
