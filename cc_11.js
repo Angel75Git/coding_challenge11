@@ -58,3 +58,25 @@ console.log(borrower1.borrowedBooks);
 console.log("=".repeat(40))
 console.log("Task 3");     //Just a decorative touch
 //Task 3
+
+class Library {
+    constructor(books = [], borrowers = []) {
+        this.books = books,
+        this.borrowers = borrowers
+    }
+    addBook(book){
+        return this.books.push(book);
+    } //Separating arrays to 
+    listsBooks(){
+        this.books.forEach(book => console.log(book.getDetails()))
+    } //Using arrow function to iterate through books
+}
+
+//Cases: 
+const library = new Library();
+library.addBook(book1);
+library.listsBooks();
+// Adding book + displaying it
+
+
+
