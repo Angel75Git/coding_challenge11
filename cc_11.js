@@ -26,3 +26,32 @@ console.log(book1.getDetails());
 book1.updateCopies(-1);
 console.log(book1.getDetails());
 
+
+console.log("=".repeat(40))
+console.log("Task 2");     //Just a decorative touch
+console.log("=".repeat(40))
+//Task 2
+
+class Borrower {
+    constructor(name, borrowerId, borrowedBooks = []) {
+        this.name = name,
+        this.borrowerId = borrowerId,
+        this.borrowedBooks = borrowedBooks //Empty array to begin
+    }
+    borrowBook(book){
+        return this.borrowedBooks.push(book);
+    } //Pushing book to array
+    returnBook(book){
+        return this.borrowedBooks.splice(book);
+    }//Deleting a book from array
+}
+
+//Test Cases:
+//Borrowed Great Gatsby
+const borrower1 = new Borrower("Alice Johnson", 201);
+borrower1.borrowBook("The Great Gatsby");
+console.log(borrower1.borrowedBooks);
+
+//Returned Great Gatsby
+borrower1.returnBook("The Great Gatsby");
+console.log(borrower1.borrowedBooks);
