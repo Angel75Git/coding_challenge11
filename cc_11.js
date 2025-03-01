@@ -1,6 +1,6 @@
 console.log("=".repeat(40))
 console.log("Task 1");     //Just a decorative touch
-console.log("=".repeat(40))
+
 //Task 1
 
 class Book {
@@ -26,10 +26,9 @@ console.log(book1.getDetails());
 book1.updateCopies(-1);
 console.log(book1.getDetails());
 
-
 console.log("=".repeat(40))
 console.log("Task 2");     //Just a decorative touch
-console.log("=".repeat(40))
+
 //Task 2
 
 class Borrower {
@@ -55,3 +54,7 @@ console.log(borrower1.borrowedBooks);
 //Returned Great Gatsby
 borrower1.returnBook("The Great Gatsby");
 console.log(borrower1.borrowedBooks);
+
+console.log("=".repeat(40))
+console.log("Task 3");     //Just a decorative touch
+//Task 3
