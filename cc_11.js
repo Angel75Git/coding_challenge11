@@ -64,12 +64,19 @@ class Library {
         this.books = books,
         this.borrowers = borrowers
     }
-    addBook(book){
-        return this.books.push(book);
+    addBook(book1){
+        return this.books.push(book1);
     } //Separating arrays to 
     listsBooks(){
         this.books.forEach(book => console.log(book.getDetails()))
     } //Using arrow function to iterate through books
+    lendBook(borrowerId, isbn){
+//Attempting to locate isnb and borrowerid
+        const book = this.books.find(b => b.isbn === isbn);
+        const borrower = this.borrowers.find(b => b.borrowerId === borrowerId);
+        book1.updateCopies(-1);
+        borrower1.borrowBook("The Great Gatsby"); // Adding book title to borrower's list
+    }
 }
 
 //Cases: 
@@ -79,4 +86,12 @@ library.listsBooks();
 // Adding book + displaying it
 
 
+console.log("=".repeat(40))
+console.log("Task 4");     //Just a decorative touch
 
+library.lendBook(201, 123456) //ISBN 123456 Book
+console.log(book1.getDetails());
+ 
+
+//Case Test
+console.log(borrower1.borrowedBooks);
